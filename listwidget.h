@@ -5,6 +5,8 @@
 #include <QWidget>
 #include <QTableView>
 #include <QVBoxLayout>
+#include <QListWidget>
+#include <QVector>
 
 
 
@@ -15,16 +17,22 @@ public:
 
     ListWidget(QWidget *parent = nullptr);
 
-    void initList();
+    void initWidget();
+
     void initLayout();
+
     void setModel(QAbstractItemModel *model);
+
+    void initListWidget();
+
+    void initVector();
+
 private:
     QTableView* table;
     QVBoxLayout* box;
+    QListWidget* widget;
 
-
-
-
+    QVector<QString> list;
 };
 
 #endif // LISTWIDGET_H

@@ -21,6 +21,7 @@ void Menu::initWidget()
 {
     stacked = new QStackedWidget();
     listWidget = new QListWidget();
+
     vboxLeft->addWidget(stacked);
     vboxRigth->addWidget(listWidget);
 }

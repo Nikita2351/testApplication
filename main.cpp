@@ -27,6 +27,9 @@ int main(int argc, char *argv[])
 
     QVector<Station> statinList;
 
+    statinList.append(*station);
+
+
     StationModel *model = new StationModel();
 
     model->SetList(statinList);
