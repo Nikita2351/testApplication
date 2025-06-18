@@ -21,11 +21,15 @@ public:
 
     void initLayout();
 
-    void setModel(QAbstractItemModel *model);
+    void setModel();
+
+    void addModel(QAbstractItemModel *model);
 
     void initListWidget();
 
     void initVector();
+
+    void flushTableWidget();
 
 private:
     QTableView* table;
@@ -33,6 +37,10 @@ private:
     QListWidget* widget;
 
     QVector<QString> list;
+
+    QAbstractItemModel *model;
+
+
 };
 
 #endif // LISTWIDGET_H

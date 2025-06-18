@@ -61,8 +61,6 @@ void Menu::initWidget()
 
     // --- Раскрываем всё ---
     treeWidget->expandAll();
-
-
 }
 
 //инициализация layout

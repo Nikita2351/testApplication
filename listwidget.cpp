@@ -40,10 +40,22 @@ void ListWidget::initListWidget()
     }
 }
 
+//очистка модели в QtableView
+void ListWidget::flushTableWidget()
+{
+    delete model;
+}
+
 //установка модели
-void ListWidget::setModel(QAbstractItemModel *model)
+void ListWidget::setModel()
 {
     table->setModel(model);
+}
+//добавление модели
+void ListWidget::addModel(QAbstractItemModel *model)
+{
+    this->model = model;
+    setModel();
 }
 
 //инициализация вектора

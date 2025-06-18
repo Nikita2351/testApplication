@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
 
     statinList.append(*station);
 
-
     StationModel *model = new StationModel();
 
     model->SetList(statinList);
@@ -44,9 +43,12 @@ int main(int argc, char *argv[])
 
     child->setStackedWidget(qobject_cast<QWidget*>(list));
 
-    list->setModel(qobject_cast<QAbstractItemModel*>(model));
+    list->addModel(qobject_cast<QAbstractItemModel*>(model));
 
     menu->show();
+
+    list->flushTableWidget();
+
 
     return a.exec();
 }
