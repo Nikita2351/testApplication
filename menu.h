@@ -7,6 +7,11 @@
 #include <QHBoxLayout>
 #include <QListWidget>
 
+#include <QTreeView>
+#include <QStandardItemModel>
+#include <QTreeWidget>
+#include <QLabel>
+
 class Menu : public QWidget
 {
     Q_OBJECT
@@ -22,7 +27,10 @@ private:
     QVBoxLayout* vboxRigth;
     QVBoxLayout* vboxLeft;
     QStackedWidget* stacked;
-    QListWidget *listWidget;
+    QTreeWidget *treeWidget ;
+private:
+
+
 
 
 };
