@@ -21,13 +21,13 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole) override;
-    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
-    int SetList(QList station);
+
+    void SetList(QVector<Station> station);
 private:
     QStringList  headers = {"НомерСтанции", "НазваниеСтанции", "ТипСтанции","КодЕСР"};
 
-    QList<Station> station;
+    QVector<Station> station;
 };
 
 #endif // STATIONMODEL_H

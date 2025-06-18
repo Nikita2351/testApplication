@@ -29,8 +29,6 @@ private:
 
     QStackedWidget *widget;
 
-    QScrollArea *area;
-
     QVector<QString> *stringlist;
 
     QListWidget *listWidget;

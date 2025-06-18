@@ -18,16 +18,24 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
     Station* station =new Station();
+
+    station->setStName("москва товарная");
+    station->setStType("1");
+    station->setCodeEsr("9865");
+    station->setStnNum(1);
+
+    QVector<Station> statinList;
+
+    StationModel *model = new StationModel();
+
+    model->SetList(statinList);
 
     Menu *menu = new Menu();
 
     ListWidget *list = new ListWidget();
 
     ChildWindow *child = new ChildWindow();
-
-    StationModel *model = new StationModel();
 
     menu->addStackedWidget(qobject_cast<QWidget*>(child));
 

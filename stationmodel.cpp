@@ -5,7 +5,7 @@ StationModel::StationModel(QObject *parent)
     : QAbstractTableModel(parent){}
 
 //установка списка
-int StationModel::SetList(QList<Station> station)
+void StationModel::SetList(QVector<Station> station)
 {
     this->station = station;
 }
@@ -103,13 +103,3 @@ bool StationModel::setHeaderData(int section, Qt::Orientation orientation, const
     return false;
 }
 
-void StationModel::sort(int column, Qt::SortOrder order)
-{
-    std::sort(station.begin(), station.end(), [column, order](const QVector<QVariant> &a, const QVector<QVariant> &b) {
-        return order == Qt::AscendingOrder
-            ? a[column] < b[column]
-            : a[column] > b[column];
-    });
-
-    emit dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1));
-}

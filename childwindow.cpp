@@ -2,13 +2,13 @@
 
 ChildWindow::ChildWindow()
 {
-    initList();
+     initList();
 
      AddLayout();
 
     initWidget();
 
-
+    initListWidget();
 
     setLayout(layout);
 
@@ -25,16 +25,22 @@ void ChildWindow::initWidget()
 {
     widget = new QStackedWidget();
 
-    area = new QScrollArea();
-
-    {
     listWidget = new QListWidget();
 
-    }
+    listWidget->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
 
-    area->setWidgetResizable(true);
+    listWidget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    // Настроить режим отображения (необязательно)
+    listWidget->setFlow(QListView::TopToBottom);  // По умолчанию
 
-    layout->addWidget(area);
+    listWidget->setFlow(QListView::LeftToRight);
+
+
+    // Уменьшаем высоту до минимального нужного размера
+    listWidget->setFixedHeight(listWidget->sizeHintForRow(0) + 60); // немного запас сверху-снизу
+
+
+    layout->addWidget(listWidget);
 
     layout->addWidget(widget);
 }

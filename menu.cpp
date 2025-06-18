@@ -16,7 +16,6 @@ Menu::~Menu()
 
 }
 
-
 //инициализация виджетов
 void Menu::initWidget()
 {
@@ -24,8 +23,8 @@ void Menu::initWidget()
     listWidget = new QListWidget();
     vboxLeft->addWidget(stacked);
     vboxRigth->addWidget(listWidget);
-
 }
+
 //инициализация layout
 void Menu::initLayout()
 {
@@ -33,6 +32,7 @@ void Menu::initLayout()
     vboxRigth = new QVBoxLayout();
     vboxLeft = new QVBoxLayout();
 }
+
 //добавление окна
 void Menu::addStackedWidget(QWidget *widget)
 {
