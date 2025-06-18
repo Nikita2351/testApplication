@@ -4,6 +4,9 @@
 #include <QAbstractTableModel>
 #include <QVector>
 #include <QStringList>
+#include <QList>
+
+#include <station.h>
 
 class StationModel : public QAbstractTableModel
 {
@@ -20,13 +23,11 @@ public:
     bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole) override;
     void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
+    int SetList(QList station);
 private:
-    QVector<QVector<QVariant>>     stations = {
-        {1, "Central Station", "Downtown"},
-        {2, "West Side", "Uptown"},
-        {3, "East Point", "Suburbs"}
-    };
-    QStringList  headers = {"ID", "Name", "Location"};
+    QStringList  headers = {"НомерСтанции", "НазваниеСтанции", "ТипСтанции","КодЕСР"};
+
+    QList<Station> station;
 };
 
 #endif // STATIONMODEL_H

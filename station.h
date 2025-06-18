@@ -8,6 +8,7 @@ class Station
 {
 public:
     Station()=default;
+
     quint8 getStnNum() const;
     void setStnNum(quint8 newStnNum);
 

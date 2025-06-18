@@ -10,10 +10,16 @@
 #include <listwidget.h>
 #include <childwindow.h>
 
+//модель(просто класс)
+#include <station.h>
+
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+
+    Station* station =new Station();
 
     Menu *menu = new Menu();
 

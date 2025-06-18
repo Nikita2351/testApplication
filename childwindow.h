@@ -26,7 +26,9 @@ private:
      void initListWidget();
 private:
     QVBoxLayout *layout;
+
     QStackedWidget *widget;
+
     QScrollArea *area;
 
     QVector<QString> *stringlist;
