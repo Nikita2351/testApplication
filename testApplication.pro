@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     childwindow.cpp \
+    initabastractmodel.cpp \
     listmodel.cpp \
     listwidget.cpp \
     main.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 
 HEADERS += \
     childwindow.h \
+    initabastractmodel.h \
     listmodel.h \
     listwidget.h \
     menu.h \

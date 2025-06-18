@@ -13,10 +13,15 @@
 //модель(просто класс)
 #include <station.h>
 
+//список моделей
+#include <listmodel.h>
+
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    QString stationName="Станция";
 
     Station* station =new Station();
 
@@ -31,7 +36,11 @@ int main(int argc, char *argv[])
 
     StationModel *model = new StationModel();
 
-    model->SetList(statinList);
+     model->SetList(statinList);
+
+    ListModel *modelList = new ListModel();
+
+    modelList->setTableModel(model,stationName);
 
     Menu *menu = new Menu();
 
@@ -43,11 +52,11 @@ int main(int argc, char *argv[])
 
     child->setStackedWidget(qobject_cast<QWidget*>(list));
 
-    list->addModel(qobject_cast<QAbstractItemModel*>(model));
+    list->addModel(qobject_cast<QAbstractItemModel*>(modelList->getTableModel("Станция")));
 
     menu->show();
 
-    list->flushTableWidget();
+    //list->flushTableWidget();
 
 
     return a.exec();
