@@ -3,7 +3,13 @@
 ChildWindow::ChildWindow()
 {
     initList();
-    AddLayout();
+
+     AddLayout();
+
+    initWidget();
+
+
+
     setLayout(layout);
 
 }
@@ -29,6 +35,7 @@ void ChildWindow::initWidget()
     area->setWidgetResizable(true);
 
     layout->addWidget(area);
+
     layout->addWidget(widget);
 }
 
@@ -54,10 +61,11 @@ void ChildWindow::initList()
 //заполнение scrollarea
 void ChildWindow::initListWidget()
 {
-
     for(int i =0 ;i<stringlist->size();i++)
     {
         listWidget->addItem(stringlist->at(i));
     }
 }
+
+
 

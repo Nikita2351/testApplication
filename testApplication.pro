@@ -13,12 +13,14 @@ SOURCES += \
     listwidget.cpp \
     main.cpp \
     menu.cpp \
+    station.cpp \
     stationmodel.cpp
 
 HEADERS += \
     childwindow.h \
     listwidget.h \
     menu.h \
+    station.h \
     stationmodel.h
 
 # Default rules for deployment.

@@ -21,15 +21,13 @@ int main(int argc, char *argv[])
 
     ChildWindow *child = new ChildWindow();
 
+    StationModel *model = new StationModel();
 
+    menu->addStackedWidget(qobject_cast<QWidget*>(child));
 
-    menu->addStackedWidget(qobject_cast<QWidget*>(list));
+    child->setStackedWidget(qobject_cast<QWidget*>(list));
 
-
-
-    StationModel model;
-
-    list->setModel(qobject_cast<QAbstractItemModel*>(&model));
+    list->setModel(qobject_cast<QAbstractItemModel*>(model));
 
     menu->show();
 

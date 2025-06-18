@@ -8,6 +8,7 @@ Menu::Menu(QWidget *parent)
     setLayout(box);
     box->addLayout(vboxRigth);
     box->addLayout(vboxLeft);
+    initWidget();
 }
 
 Menu::~Menu()
@@ -21,6 +22,9 @@ void Menu::initWidget()
 {
     stacked = new QStackedWidget();
     listWidget = new QListWidget();
+    vboxLeft->addWidget(stacked);
+    vboxRigth->addWidget(listWidget);
+
 }
 //инициализация layout
 void Menu::initLayout()

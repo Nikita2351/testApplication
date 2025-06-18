@@ -19,7 +19,9 @@ public:
 private:
     void AddLayout();
     void initWidget();
+public:
     void setStackedWidget(QWidget *widget);
+private:
     void initList();
      void initListWidget();
 private:
