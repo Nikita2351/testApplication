@@ -12,6 +12,7 @@
 
 //модель(просто класс)
 #include <station.h>
+#include <way.h>
 
 //список моделей
 #include <listmodel.h>
@@ -22,6 +23,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QString stationName="Станция";
+    QString wayName = "Путь";
 
     Station* station =new Station();
 
@@ -29,6 +31,12 @@ int main(int argc, char *argv[])
     station->setStType("1");
     station->setCodeEsr("9865");
     station->setStnNum(1);
+
+    Way* way =new Way();
+
+    way->setIdWay(1);
+    way->setTypeWay(1);
+    way->setTypeTravel(2);
 
     QVector<Station> statinList;
 

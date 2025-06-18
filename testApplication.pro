@@ -10,24 +10,24 @@ CONFIG += c++11
 
 SOURCES += \
     childwindow.cpp \
-    initabastractmodel.cpp \
     listmodel.cpp \
     listwidget.cpp \
     main.cpp \
     menu.cpp \
     station.cpp \
     stationmodel.cpp \
-    way.cpp
+    way.cpp \
+    waymodel.cpp
 
 HEADERS += \
     childwindow.h \
-    initabastractmodel.h \
     listmodel.h \
     listwidget.h \
     menu.h \
     station.h \
     stationmodel.h \
-    way.h
+    way.h \
+    waymodel.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
